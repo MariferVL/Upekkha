@@ -5,14 +5,28 @@
 ● Se deberá mostrar en pantalla el total del IVA (19%) del total de pedido ingresado.
 ● Se deberá mostrar en pantalla el total final del pedido (la suma del valor neto + IVA)."""
 
+chorr= 22000 
+chac= 7000 
+comp= 6000
+terr= 15000
+moj= 20000 
 
-print("Ingresa cantidad de paltas")
-paltas= input()
-print("Ingresa cantidad de tomates")
-tomates= input()
-print("Ingresa cantidad de churrascos")
-churrascos= input()
-print("Ingresa cantidad de mayonesa")
-mayonesa= input()
-print("Ingresa cantidad de chucrut")
-chucrut= input()
+print("¿Cuántas chorrillanas desea?")
+chorrCant= int(input())
+print("¿Cuántos chacareros desea?")
+chacCant= int(input())
+print("¿Cuántos completos desea?")
+compCant= int(input())
+print("¿Cuántos terremotos desea?")
+terrCant= int(input())
+print("¿Cuántos mojitos desea?")
+mojCant= int(input())
+
+
+result= chorr*chorrCant + chac*chacCant + comp*compCant + terr*terrCant +  moj*mojCant
+percIVA= 19
+iva= result * (percIVA / 100) 
+precioplussIva= result + iva
+print("Total: ${}".format(result))
+print("IVA: ${}".format(iva))
+print("Total con IVA: ${}".format(precioplussIva))
